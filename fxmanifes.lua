@@ -1,23 +1,16 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'M O N O / T O X I C'
-description 'Skrypt na sprzedażdragów dziwnym panom'
-version '1.0.0'
+author 'M O N O'
+description 'Prosty skrypt na sprzedaż narko odpowiednim pedom'
+version '1.5.0'
 
 client_scripts {
-    'client/*.lua',
     'config/*.lua',
+    'client/*.lua',
 }
-
-shared_script 'config/config.lua'
 
 server_scripts {
+    'config/*.lua',
     'server/*.lua',
-    'config/*.lua'
-}
-
-dependencies {
-    'es_extended',
-    'ped_spawner'
 }
