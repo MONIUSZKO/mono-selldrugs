@@ -1,3 +1,7 @@
+ESX = nil
+
+TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+
 RegisterNetEvent('mono:dealer:Sprzedaj', function()
     local xPlayer = ESX.GetPlayerFromId(source)
     local cansell = false
@@ -8,8 +12,7 @@ RegisterNetEvent('mono:dealer:Sprzedaj', function()
                 local reward = v.count * math.random(Config.Narko[v.name].min, Config.Narko[v.name].max)
                 cansell = true
                 xPlayer.removeInventoryItem(v.name, v.count)
-				XPlayer.addInventoryItem('black_money', reward)
-
+				xPlayer.addInventoryItem(Config.Money, reward)
                 xPlayer.showNotification('Otrzymałeś ' ..reward.. '$ ze sprzedaży ' ..v.label)
             end
         end
