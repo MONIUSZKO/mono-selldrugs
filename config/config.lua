@@ -1,21 +1,16 @@
-Config        = {}
+Config         = {}
 
-Config.Target = 'qtarget'                       -- tutaj ustaw swój target (qtarget lub bt-target)
+Config.Target  = ''           -- wpisz tutaj nazwę swojego targeta (qtarget lub bt-target)
 
-Config.Ped    = 'a_m_y_breakdance_01'           -- tutaj daj nazwę peda pod którego podpięta będzie sprzedaż (nie zapomnij dodać lokacji w ped_spawner)
+Config.Money   = ''           -- co ma otrzymać gracz podczas sprzedąży (money - czysta gotówka, black_money - brudna gotówka)
 
-Narko         = {
+Config.Ped     = ''           -- nazwa peda u którego sprzedajemy narko
+
+
+Config.Narko         = {
     ['weed_lemon'] = {
         min = 10,
         max = 15
-    },
-    ['opium'] = {
-        min = 40,
-        max = 55,
-    },
-    ['coke'] = {
-        min = 50,
-        max = 75,
     },
 }
 
